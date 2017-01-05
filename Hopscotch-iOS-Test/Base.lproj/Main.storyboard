@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Y2y-ES-zSn">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Your Feeds-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Your Feeds" id="BYZ-38-t0r" customClass="HSMainFeedViewController" customModule="Hopscotch_iOS_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sjj-JK-mxR">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="57" minimumInteritemSpacing="30" id="aHq-Hm-2hn">
+                                    <size key="itemSize" width="276" height="267"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="63" minY="60" maxX="63" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="PLd-gf-5On" customClass="CollectionViewCell" customModule="Hopscotch_iOS_Test" customModuleProvider="target">
+                                        <rect key="frame" x="63" y="60" width="276" height="267"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="276" height="267"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0v-XD-4V2">
+                                                    <rect key="frame" x="0.0" y="5" width="276" height="15"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFo-QB-U7T">
+                                                    <rect key="frame" x="0.0" y="31" width="276" height="25"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G8Q-4K-qLi">
+                                                    <rect key="frame" x="0.0" y="50" width="276" height="207"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="k0v-XD-4V2" firstAttribute="width" secondItem="PLd-gf-5On" secondAttribute="width" id="3Pc-Xl-c1H"/>
+                                            <constraint firstItem="G8Q-4K-qLi" firstAttribute="width" secondItem="PLd-gf-5On" secondAttribute="width" id="L6L-Ag-ctX"/>
+                                            <constraint firstItem="G8Q-4K-qLi" firstAttribute="centerX" secondItem="PLd-gf-5On" secondAttribute="centerX" id="LKR-RT-IO0"/>
+                                            <constraint firstItem="qFo-QB-U7T" firstAttribute="height" secondItem="k0v-XD-4V2" secondAttribute="height" id="LrA-YB-SYM"/>
+                                            <constraint firstItem="qFo-QB-U7T" firstAttribute="centerX" secondItem="PLd-gf-5On" secondAttribute="centerX" id="Ssp-9X-dCo"/>
+                                            <constraint firstItem="qFo-QB-U7T" firstAttribute="top" secondItem="k0v-XD-4V2" secondAttribute="bottom" constant="6" id="Vh6-i9-hch"/>
+                                            <constraint firstItem="k0v-XD-4V2" firstAttribute="top" secondItem="PLd-gf-5On" secondAttribute="top" id="Zzz-we-7G1"/>
+                                            <constraint firstItem="qFo-QB-U7T" firstAttribute="width" secondItem="PLd-gf-5On" secondAttribute="width" id="ePC-qz-2qt"/>
+                                            <constraint firstItem="G8Q-4K-qLi" firstAttribute="height" secondItem="PLd-gf-5On" secondAttribute="height" multiplier="0.775" id="nYo-8b-ebv"/>
+                                            <constraint firstItem="G8Q-4K-qLi" firstAttribute="bottom" secondItem="PLd-gf-5On" secondAttribute="bottom" id="srj-XM-lSk"/>
+                                            <constraint firstItem="k0v-XD-4V2" firstAttribute="centerX" secondItem="PLd-gf-5On" secondAttribute="centerX" id="tdp-c6-b4M"/>
+                                        </constraints>
+                                        <size key="customSize" width="276" height="267"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="imageView" destination="G8Q-4K-qLi" id="Rcf-hN-Q7d"/>
+                                            <outlet property="titleLabel" destination="k0v-XD-4V2" id="IHA-rN-keI"/>
+                                            <outlet property="userLabel" destination="qFo-QB-U7T" id="PWL-R9-C7H"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="WUO-c1-djM"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2eM-xo-HtY"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sjj-JK-mxR" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" id="NAo-sX-Mph"/>
+                            <constraint firstItem="sjj-JK-mxR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TQg-yZ-kbz"/>
+                            <constraint firstItem="sjj-JK-mxR" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="aza-vu-bbB"/>
+                            <constraint firstItem="sjj-JK-mxR" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="dmk-Lw-GXM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your Feeds" id="6VJ-eW-DIN"/>
+                    <connections>
+                        <outlet property="collectionView" destination="sjj-JK-mxR" id="YEg-Uv-JSb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839.6484375" y="122.65625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uy0-Mk-dx2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y2y-ES-zSn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2ty-Hu-b4F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0iD-zg-nvU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLm-at-7Yi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115.42968749999999" y="122.65625"/>
+        </scene>
+    </scenes>
+</document>
